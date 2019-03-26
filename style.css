@@ -1,0 +1,61 @@
+html
+{
+  background-image: url(http://www.technocrazed.com/wp-content/uploads/2015/12/Green-Wallpaper-9.jpg);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+}
+#lab2
+{
+  font-family: sans-serif;
+  font-size: 14pt;
+  font-style: italic;
+}
+#navb
+{
+  overflow: hidden;
+  background-color: rgb(54, 90, 54); 
+}
+#navb a
+{
+  float: left;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+.content
+{
+  padding: 16px;
+}
+.sticky
+{
+  position: fixed;
+  top: 0;
+  width: 100%; 
+}
+.sticky + .content
+{
+  padding-top: 60px;
+}
+h1
+{
+  text-align: center;
+  padding-top: 15px;
+  color: black;
+}
+#game
+{
+  background-color: lightgrey;
+  color: black;
+  display: inline-block;
+  font-size: 20px;
+  padding: 60px 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 15%;
+}
+.gameArea
+{
+  align-content: center;
+}
