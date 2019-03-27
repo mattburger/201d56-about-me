@@ -50,13 +50,11 @@ function daGame()
   for(var i = 0; i < questionBank.length; i++)
   {
     currentAns = prompt(questionBank[i]);
-    if(currentAns === '')
+    while(currentAns === '')
     {
-      while(currentAns === '')
-      {
-        currentAns = prompt(questionBank[i])
-      }
+      currentAns = prompt(questionBank[i])
     }
+    
     console.log("Question " + i + " answer: "+currentAns);
     usrAns.push(currentAns);
     lowerCaseUsrAns = currentAns.toLowerCase();
