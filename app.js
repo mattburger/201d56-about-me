@@ -59,7 +59,7 @@ function daGame()
     {
       results+=0;
       console.log("Iteration "+i+": "+results);
-      console.log("(in else: Comparison of " + tmp.toLowerCase + "and " + answerBank[i]);
+      console.log("(in else: Comparison of " + tmp.toLowerCase + " and " + answerBank[i]);
     }
 
   }
