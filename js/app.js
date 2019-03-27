@@ -25,7 +25,7 @@ var usrAns = [];
 var buttonClick = document.getElementById('game');
 buttonClick.onclick = function() {daGame()};
 
-function daGame()
+function daGame()//from lab 2
 {
   /*Retrieve user's first name */
   usrName = prompt("What is your first name? ");
@@ -81,35 +81,47 @@ function daGame()
   {
     console.log("in the guess question else; results not incremented");
   }
-
-  /*ask the final questions involving states */
-  var guessState = prompt("Guess a state that I have lived in using state abbreviations: ");
-
-  /*make guessState to lower case */
-  guessState = guessState.toLowerCase();
+  
+  /*flag used to indicate there was a match between user state guess and stored answers*/
+  var stateMatchFlag = 0; 
 
   ++totalQues; //increase the total number of questions
-
-  /*flag used to indicate there was a match between user state guess and stored answers*/
-  var stateMatchCounter = 0; 
-
-  /*Traverse the array ansStates to see if user guess matches */
-  for(var i = 0; i < ansStates.length; i++)
+  var guessState = '/0';
+  var stateHolder = 'skipped_case';
+  var guessTries = 0;
+  var guessLimit = 6; 
+  var numberOfGuesses = 0;
+  var stateHold = ''; //hold ansState[index] values
+  while( (guessTries < guessLimit) && (stateMatchFlag != 1 ))
   {
-    var stateHolder = ansStates[i];
-    stateHolder = stateHolder.toLowerCase(); //make lowercase for comparison
-    if(guessState === stateHolder)
+    numberOfGuesses = guessLimit - guessTries;
+    guessState = prompt("Other than WA, guess a state I have lived in using state abbreviations (# of guesses left: " + numberOfGuesses + "): ");
+
+    console.log("number of guesses: "+numberOfGuesses);
+    
+    guessTries++;
+    for(var i = 0; i < ansStates.length; i++)
     {
-      stateMatchCounter++;
+      guessState = guessState.toLowerCase();
+      stateHold = ansStates[i].toLowerCase();
+      //if(guessState === ansStates[i])
+      if(guessState === stateHold)
+      {
+        stateMatchFlag = 1;
+        console.log("Value in guessState: " + guessState);
+        console.log("Value in ansStates[i]: "+ansStates[i]);
+      }
     }
+    console.log("guess tries: " + guessTries);
+
   }
   /*increase user's score if flag is triggered */
-  if(stateMatchCounter > 0)
+  if(stateMatchFlag > 0)
   {
     results++;
   }
 
-  window.location.href = "./index.html"; //take back to homepage
+  //window.location.href = "./index.html"; //take back to homepage
 
   /*score of 5 or more gets a nice response */
   if(results >= 5)
@@ -121,4 +133,5 @@ function daGame()
   {
     alert(usrName +"! You scored " + results+"out of "+ totalQues + ". Better luck next time...");
   }
+  window.location.href = "./index.html"; //take back to homepage
 }
