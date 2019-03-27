@@ -1,27 +1,5 @@
 'use strict';
 
-/*Learned from w3schools which scrolling occurs, run stickyNav*/
-window.onscroll = function(){stickyNav()};
-
-/*Be able to reference navb in Javascript */
-var navb = document.getElementById("navb");
-
-/*navb's offset position to referece */
-var sticky = navb.offsetTop;
-
-/*Monitors user scrolling. If user scrolls down a size greater than navb, make navb stick. Else unstick it. */
-function stickyNav()
-{
-  if(window.pageYOffset >= sticky)
-  {
-    navb.classList.add("sticky");
-  }
-  else
-  {
-    navb.classList.remove("sticky");
-  }
-}
-
 /*random number generator from 1-25 stored in variable numGuess.
   Usee as the 6th question for user to guess a number*/
 /*Learned from w3schools */
