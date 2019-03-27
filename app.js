@@ -30,9 +30,11 @@ var answerBank = ["Navy", "USS Makin Island", "SSDS", "Network Technician","Gree
 
 var usrAns = [];
 var buttonClick = document.getElementById('game');
-buttonClick.onclick = function () {daGame()};
+buttonClick.onclick = function() {daGame()};
 function daGame()
 {
+  var tmp2='';
+  var tmp3='';
   for(var i = 0; i < questionBank.length; i++)
   {
     tmp = prompt(questionBank[i]);
@@ -45,9 +47,19 @@ function daGame()
     }
     console.log("Question " + i + " answer: "+tmp);
     usrAns.push(tmp);
-    if(tmp.toLowerCase === answerBank[i].toLowerCase)
+    tmp2 = tmp.toLowerCase();
+    tmp3 = answerBank[i].toLowerCase();
+    if(tmp2 === tmp3)
     {
       results++;
+      console.log("Iteration "+i+": "+results);
+      console.log("(in if: Comparison of " + tmp2 + "and " + tmp3);
+    }
+    else
+    {
+      results+=0;
+      console.log("Iteration "+i+": "+results);
+      console.log("(in else: Comparison of " + tmp.toLowerCase + "and " + answerBank[i]);
     }
 
   }
