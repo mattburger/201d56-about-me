@@ -24,9 +24,9 @@ function stickyNav()
 
 var tmp = '';
 var results = 0;
-var questionBank = ["What movie am I from?", "What character do I play?", "What is my real name?","Did I win an award starring in this role?", "Am I still alive?"];
+var questionBank = ["What branch of the military did I serve?", "What command was I at?", "What was the acronym of the system I worked on?","What was my job title?", "What is my favorite color?"];
 
-var answerBank = ["Training Day", "Alonzo Harris", "Denzel Washington", "yes"];
+var answerBank = ["Navy", "USS Makin Island", "SSDS", "Network Technician","Green"];
 
 var usrAns = [];
 var buttonClick = document.getElementById('game');
@@ -45,7 +45,7 @@ function daGame()
     }
     console.log("Question " + i + " answer: "+tmp);
     usrAns.push(tmp);
-    if(tmp === answerBank[i])
+    if(tmp.toLowerCase === answerBank[i].toLowerCase)
     {
       results++;
     }
@@ -55,4 +55,3 @@ function daGame()
   alert("yay");
   alert("You scored " + results+" out of "+ questionBank.length);
 }
-/*document.getElementById('labme').innerHTML = "These are your results out of "+ questionBank.length + ": " + results;*/
