@@ -67,7 +67,6 @@ function daGame()
     }
     else
     {
-      results+=0;
       console.log("Iteration "+i+": "+results);
       console.log("(in else: Comparison of " + currentAns.toLowerCase + " and " + answerBank[i]);
     }
@@ -92,7 +91,6 @@ function daGame()
   }
   else
   {
-    results += 0;
     console.log("in the guess question else; results not incremented");
   }
   window.location.href = "./index.html";
