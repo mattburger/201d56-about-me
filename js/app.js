@@ -40,7 +40,6 @@ function daGame()//from lab 2
     {
       currentAns = prompt(questionBank[i])
     }
-    
     console.log("Question " + i + " answer: "+currentAns);
     usrAns.push(currentAns);
     lowerCaseUsrAns = currentAns.toLowerCase();//makes user ans lower case
@@ -94,6 +93,13 @@ function daGame()//from lab 2
     }
     else
     {
+      //Saurav's Edit: Giving hint to the user for lower or higher value
+      if(numGuess>usrGuess){
+        alert('Hint: Number is greater');
+      }
+      else{
+        alert('Hint :Number is lower');
+      }
       console.log("number of gueses for number question: " + numberOfGuesses);
       alert("Incorrect. Keepy trying!");
       console.log("in the guess question else; results not incremented");
