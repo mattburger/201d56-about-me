@@ -5,12 +5,14 @@ html
  /* background-repeat: no-repeat;*/
 
 }
+
 #lab2
 {
   font-family: sans-serif;
   font-size: 18pt;
   font-style: italic;
 }
+
 #navb
 {
   overflow: hidden;
@@ -20,6 +22,7 @@ html
   top: 5px;
 
 }
+
 #navb a
 {
   float: left;
@@ -29,30 +32,24 @@ html
   padding: 14px;
   text-decoration: none;
 }
-/*
-.content
-{
-  padding: 16px;
-}
-.sticky
-{
-  position: fixed;
-  top: 0;
-  width: 100%; 
-}*/
+
 .sticky + .content
 {
   padding-top: 60px;
 }
+
 h1
 {
   text-align: center;
   color: black;
+  font-family: sans-serif;
+  font-size: 18pt;
   background-color: rgb(231, 245, 185);
   padding: 25px;
   border: 10px inset rgb(54, 90, 54);
   margin: 50px 10px 20px 10px;
 }
+
 #game
 {
   background-color: lightgrey;
@@ -64,10 +61,12 @@ h1
   text-align: center;
   width: 15%;
 }
+
 .gameArea
 {
   align-content: center;
 }
+
 p
 {
   text-align: center;
@@ -77,10 +76,12 @@ p
   border-radius: 5px;
 
 }
+
 div
 {
   text-align: center;
 }
+
 .favmovies
 {
   float: left;
@@ -91,6 +92,7 @@ div
   border: 5px dotted rgb(54, 90, 54);
   margin: 10px;
 }
+
 .favplaces
 {
   float: right;

@@ -50,36 +50,54 @@ function daGame()//from lab 2
     if(lowerCaseUsrAns === lowerCaseAns)
     {
       results++;
+      alert("Correct! ");
       console.log("Iteration "+i+": "+results);
       console.log("(in if: Comparison of " + lowerCaseUsrAns + "and " + lowerCaseAns);
     }
     else
     {
+      alert("Incorrect. The answer is: " + answerBank[i]);
       console.log("Iteration "+i+": "+results);
       console.log("(in else: Comparison of " + currentAns.toLowerCase + " and " + answerBank[i]);
     }
   }
 
-  /*random number generator from 1-25 stored in variable numGuess.
+ //set guess limit for question 6
+  var numberOfGuesses = 4;
+
+   /* Thanks to w3Schools. Random number generator from 1-25 stored in variable numGuess.
   Use as the 6th question for user to guess a number*/
-  /*Learned from w3schools */
   var numGuess = Math.floor((Math.random() * 25) + 1);
   console.log("captured value from random number generator: " + numGuess);
-  var usrGuess = prompt("Guess a number between 1 - 25: ");
-  console.log("user guess as string: "+usrGuess);
-
-  usrGuess = parseInt(usrGuess);//convert user input from string to int
-  console.log("user guess after int conversion: " + usrGuess);//make sure our value makes sense
-  
+  var usrGuess = '';
   var totalQues = questionBank.length + 1; //account for number question
-  if(usrGuess === numGuess)
+  
+  
+  while(usrGuess != numGuess && numberOfGuesses > 0)
   {
-    results++;
-    console.log("in the guess quesiton if; results incremented");
-  }
-  else
-  {
-    console.log("in the guess question else; results not incremented");
+    usrGuess = prompt("Guess how many Pokemon I caught last night (1 - 25)"+" # of guees left (" + numberOfGuesses + "): ");
+    usrGuess = parseInt(usrGuess);//convert user input from string to int
+    console.log("user guess after int conversion: " + usrGuess);//make sure our value makes sense
+     
+    numberOfGuesses--;
+    if(usrGuess === numGuess)
+    {
+      console.log("number of guesses for number question: " + numberOfGuesses);
+      alert("Correct!");
+      results++;
+      console.log("in the guess quesiton if; results incremented");
+      break;
+    }
+    else if(numberOfGuesses === 0)
+    {
+      alert("Nice tries! The answer was: " + numGuess);
+    }
+    else
+    {
+      console.log("number of gueses for number question: " + numberOfGuesses);
+      alert("Incorrect. Keepy trying!");
+      console.log("in the guess question else; results not incremented");
+    }
   }
   
   /*flag used to indicate there was a match between user state guess and stored answers*/
@@ -90,7 +108,7 @@ function daGame()//from lab 2
   var stateHolder = 'skipped_case';
   var guessTries = 0;
   var guessLimit = 6; 
-  var numberOfGuesses = 0;
+  numberOfGuesses = 0;
   var stateHold = ''; //hold ansState[index] values
   while( (guessTries < guessLimit) && (stateMatchFlag != 1 ))
   {
@@ -119,6 +137,11 @@ function daGame()//from lab 2
   if(stateMatchFlag > 0)
   {
     results++;
+    alert("Correct! All possible answers: " + ansStates);
+  }
+  else
+  {
+    alert("Incorrect. All possible answers: " + ansStates);
   }
 
   //window.location.href = "./index.html"; //take back to homepage
