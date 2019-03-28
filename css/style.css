@@ -103,8 +103,35 @@ div
   border: 5px dotted rgb(54, 90, 54);
   margin: 10px;
 }
+ul.favplaces
+{
+  list-style-type: circle;
+
+}
+ol.favmovies
+{
+  list-style-type: decimal;
+}
+.listTitle
+{
+  font-size: 14pt;
+  font-weight: bold;
+  text-decoration-line: underline;
+}
 
 #listStuff
 {
-  border: 5px dashed rgb(54, 90, 54)
+  border: 5px dashed rgb(54, 90, 54);
+  font-family: sans-serif;
+}
+#backgroundP
+{
+  margin: 25px 70px 60px 70px;
+  border: dashed rgb(54, 90, 54);
+  padding: 30px;
+  background-color: rgb(231, 245, 185);
+  font-size: 14pt;
+  font-family: sans-serif;
+  text-align: left;
+  color: black;
 }
