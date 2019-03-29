@@ -1,6 +1,8 @@
 html
 {
-  background-image: url(http://www.technocrazed.com/wp-content/uploads/2015/12/Green-Wallpaper-9.jpg);
+  /*thanks to http://www.technocrazed.com/wp-content/uploads/2015/12/Green-Wallpaper-9.jpg*/
+  background-color: rgb(157, 201, 121);
+  background-image: url("../pictures/greenBackground.jpg");
   background-blend-mode: overlay;
  /* background-repeat: no-repeat;*/
 
