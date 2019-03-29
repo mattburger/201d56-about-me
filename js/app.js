@@ -46,8 +46,9 @@ function daGame()//from lab 2
     lowerCaseAns = answerBank[i].toLowerCase();//makes actual ans lower case
 
     /*compare user ans to actual answer */
-    if(lowerCaseUsrAns === lowerCaseAns)
+    if(lowerCaseUsrAns === lowerCaseAns || lowerCaseUsrAns[0] === lowerCaseAns[0])
     {
+      console.log('ANSWER SUBSTRING: '+ lowerCaseUsrAns[0] );
       results++;
       alert("Correct! ");
       console.log("Iteration "+i+": "+results);
@@ -155,12 +156,12 @@ function daGame()//from lab 2
   /*score of 5 or more gets a nice response */
   if(results >= 5)
   {
-    alert(usrName +"! You scored " + results + "  out of "+ totalQues + ". Good job!!");
+    alert(usrName +"! You scored " + results + " out of "+ totalQues + ". Good job!!");
   }
   /*score < 5 gets a more somber response */
   else
   {
-    alert(usrName +"! You scored " + results+"out of "+ totalQues + ". Better luck next time...");
+    alert(usrName +"! You scored " + results+" out of "+ totalQues + ". Better luck next time...");
   }
   window.location.href = "./index.html"; //take back to homepage
 }
