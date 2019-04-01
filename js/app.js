@@ -71,15 +71,14 @@ function daGame()//from lab 2
   var numGuess = Math.floor((Math.random() * 25) + 1);
   console.log('captured value from random number generator: ' + numGuess);
   var usrGuess = '';
-  var totalQues = questionBank.length + 1; //account for number question
-  
-  
+  //accounting for number question (question 6)
+  var totalQues = questionBank.length + 1;
   while(usrGuess !== numGuess && numberOfGuesses > 0)
   {
     usrGuess = prompt('Guess how many Pokemon I caught last night (1 - 25) # of guees left (' + numberOfGuesses + '): ');
     usrGuess = parseInt(usrGuess);//convert user input from string to int
     console.log('user guess after int conversion: ' + usrGuess);//make sure our value makes sense
-     
+
     numberOfGuesses--;
     if(usrGuess === numGuess)
     {
@@ -107,7 +106,7 @@ function daGame()//from lab 2
       console.log('in the guess question else; results not incremented');
     }
   }
-  
+
   /*flag used to indicate there was a match between user state guess and stored answers*/
   var stateMatchFlag = 0; 
 
@@ -124,7 +123,7 @@ function daGame()//from lab 2
     guessState = prompt('Other than WA, guess a state I have lived in using state abbreviations (# of guesses left: ' + numberOfGuesses + '): ');
 
     console.log('number of guesses: '+numberOfGuesses);
-    
+
     guessTries++;
     for(/*var*/i = 0; i < ansStates.length; i++)
     {
