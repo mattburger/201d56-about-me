@@ -1,7 +1,6 @@
 'use strict';
 
-//random number generator from 1-25 stored in variable numGuess.
-//Use as the answer for 6th question to user to guess a number.
+
 
 /*Learned from w3schools */
 var usrName = '';
